@@ -14,7 +14,7 @@ VALID_COUNTRIES = {
 
 def scrape_mastercard_job_counts():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # Debug mode (Change to True later)
+        browser = p.chromium.launch(headless=True)  # Debug mode (Change to True later)
         page = browser.new_page()
         page.goto("https://careers.mastercard.com/us/en/search-results", timeout=60000)
 
